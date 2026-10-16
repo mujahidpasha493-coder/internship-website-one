@@ -6,9 +6,7 @@ pipeline {
             steps {
                 sh '''
                     set -e
-                    sudo cp -r ./* /var/www/website-one/
-                    sudo chown -R jenkins:webdeploy /var/www/website-one
-                    sudo chmod -R 775 /var/www/website-one
+                    cp index.html style.css /var/www/website-one/
                 '''
             }
         }
